@@ -2,7 +2,7 @@
 
 PETSC_DIR=$HOME/petsc PETSC_ARCH=alex-maint-opt ../configure INSTALL="/usr/bin/install" \
          --with-methods="${METHODS}" \
-         --prefix=$HOME/projects2/moose/libmesh/installed \
+         --prefix=$0 \
          --enable-silent-rules \
          --enable-unique-id \
          --disable-warnings \
