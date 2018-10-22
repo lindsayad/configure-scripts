@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-PETSC_DIR=$HOME/petsc PETSC_ARCH=alex-maint-opt ../configure INSTALL="/usr/bin/install" \
+$* ../configure INSTALL="/usr/bin/install" \
          --with-methods="${METHODS}" \
-         --prefix=$0 \
+         --prefix="${PREFIX}" \
          --enable-silent-rules \
          --enable-unique-id \
          --disable-warnings \
@@ -10,4 +10,4 @@ PETSC_DIR=$HOME/petsc PETSC_ARCH=alex-maint-opt ../configure INSTALL="/usr/bin/i
          --disable-maintainer-mode \
          --enable-petsc-hypre-required \
          --enable-metaphysicl \
-         --disable-timestamps $* || exit 1
+         --disable-timestamps || exit 1
